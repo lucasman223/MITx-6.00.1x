@@ -10,7 +10,7 @@
 answer = 0
 inp = input("type in a string: ")
 for char in inp:
-    if (char == "a" or char == "i" or char == "o" or char == "u"):
+    if (char == "a" or char == "e" or char == "i" or char == "o" or char == "u"):
         answer += 1
 
-print("Number of vowels is" , answer)
+print("Number of vowels: " , answer)

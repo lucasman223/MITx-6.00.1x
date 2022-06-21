@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+exercise 2-4.22 Lucas Ma 
 A clever mathematical trick (due to Euclid) 
 makes it easy to find greatest common divisors. 
 Suppose that a and b are two positive integers:

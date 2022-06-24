@@ -1,5 +1,5 @@
 # Hangman game
-#
+# problem set 3 Lucas Ma
 
 # -----------------------------------
 # Helper code

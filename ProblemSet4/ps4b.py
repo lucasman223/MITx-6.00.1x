@@ -103,7 +103,7 @@ def compPlayHand(hand, wordList, n):
 def playGame(wordList):
     """
     Allow the user to play an arbitrary number of hands.
- 
+
     1) Asks the user to input 'n' or 'r' or 'e'.
         * If the user inputs 'e', immediately exit the game.
         * If the user inputs anything that's not 'n', 'r', or 'e', keep asking them again.
@@ -125,9 +125,31 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
-
-        
+    hand = {}
+    inp = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
+    while inp != "e":
+        if inp == "r" and hand == {}:
+            print("You have not played a hand yet. Please play a new hand first!")
+            print()
+        elif inp != "n" and inp != "r" and inp != "e":
+            print("Invalid command.")
+        else:
+            if inp == "n":
+                hand = dealHand(HAND_SIZE)
+                
+            #if inp == "r":
+            
+            inp2 = input("Enter u to have yourself play, c to have the computer play:")
+            while inp2 != "u" and inp2 != "c":
+                print("Invalid command.")
+                inp2 = input("Enter u to have yourself play, c to have the computer play:")
+            
+            if inp2 == "u":    
+                playHand(hand,wordList, HAND_SIZE)
+            else:
+                compPlayHand(hand, wordList, HAND_SIZE)
+            
+        inp = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")                
 #
 # Build data structures used for entire session and play game
 #

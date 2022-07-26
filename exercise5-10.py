@@ -12,15 +12,16 @@ def genPrimes():
     while True:
         for p in prevPrimes:
             if (x % p) == 0:
-                print(x, p)
                 isPrime = False
                 break
-        print(x, " ", isPrime)
         
         if isPrime:
             prevPrimes.append(x)
             yield x
         x += 1
         isPrime = True
-     
 
+shift = 3
+char = "z"
+print(ord("a"))
+print(chr( (ord(char) + shift - 97)%26 + 97 ))
